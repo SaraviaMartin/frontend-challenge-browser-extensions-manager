@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser Extensions Manager</title>
+    <title>Administrador de Extensiones</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Browser Extensions Manager</h1>
-    </header>
-    <main>
-        <section id="extensions-list">
-            <!-- Aquí se listarán las extensiones -->
-        </section>
-    </main>
+<body class="light-theme">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="Extensions">
+                </div>
+                <button class="theme-toggle" aria-label="Cambiar tema">
+                    <img src="assets/images/icon-moon.svg" alt="Tema oscuro">
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="inactive">Inactive</button>
+            </div>
+
+            <div class="extensions-grid" id="extensionsContainer">
+                <!-- Las extensiones se cargarán dinámicamente aquí -->
+            </div>
+        </main>
+    </div>
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
